@@ -31,7 +31,7 @@ TTs
 - Uses the pre-trained Silero [v3_en model](https://models.silero.ai/models/tts/en/)
 
 Long-term memory
-- Stores prompts and responses into a vector databse using chromadb
+- Stores prompts and responses into a vector database using chromadb
 - Queries the database and gets the top 3 most similar past conversations to add additional context to the current prompt
 - [Reference](https://brain.d.foundation/Engineering/AI/Dealing+with+Long-Term+Memory+in+AI+Chatbot)
 
