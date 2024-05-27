@@ -1,5 +1,4 @@
 import google.generativeai as genai
-import speech_recognition as sr
 import winsound, re, torch
 from num2words import num2words
 from utils import *
@@ -52,14 +51,11 @@ class Girlfriend:
 
     @staticmethod
     def GetInput() -> str:
-        rec = sr.Recognizer() 
-        
         with sr.Microphone() as source: 
-            rec.pause_threshold = 0.5
-            audio = rec.listen(source) 
+            audio = Utils.SST.listen(source) 
     
         try: 
-            return rec.recognize_google(audio, language='en-in').lower().strip()
+            return Utils.SST.recognize_google(audio, language='en-in').lower().strip()
         
         except Exception as e:
             return Girlfriend.Error("record voice", e)
@@ -148,10 +144,10 @@ class Girlfriend:
         Girlfriend.Ended = True
 
     @staticmethod
-    def Error(action: str, error: str) -> None:
-        print(f"Failed to {action}: {error}")
-
-    @staticmethod
     def Reset() -> None:
         for i in Girlfriend.Memory.get()["ids"]:
             Girlfriend.Memory.delete(i)
+
+    @staticmethod
+    def Error(action: str, error: str) -> None:
+        print(f"Failed to {action}: {error}")

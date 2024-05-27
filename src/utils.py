@@ -1,10 +1,13 @@
 import tkinter as tk
-import os
 from PIL import Image, ImageTk
-import chromadb
+import os, chromadb
+import speech_recognition as sr
 
 
 class Utils:
+    SST = sr.Recognizer()
+    SST.pause_threshold = 0.5
+
     Root = os.path.dirname(os.path.abspath(__file__))
     Client = chromadb.Client(
         settings=chromadb.Settings(
