@@ -7,7 +7,7 @@
 ---
 
 ### Dependencies
-```
+```bat
 pip install python-dotenv
 pip install SpeechRecognition
 pip install google-generativeai
@@ -31,3 +31,12 @@ Long-term memory
 - Stores prompts and responses into a vector databse using chromadb
 - Queries the database and gets the top 3 most similar past conversations to add additional context to the current prompt
 - [Reference](https://brain.d.foundation/Engineering/AI/Dealing+with+Long-Term+Memory+in+AI+Chatbot)
+
+---
+
+### Commands
+`exit`
+- Closes the program
+
+`reset`
+- Deletes all conversation history and resets the AI's memory
