@@ -7,7 +7,7 @@
 ---
 
 ### Dependencies
-```bat
+```
 pip install python-dotenv
 pip install SpeechRecognition
 pip install google-generativeai
