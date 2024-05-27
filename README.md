@@ -24,6 +24,9 @@ pip install chromadb
 Response generation
 - [Gemini 1.0 API](https://ai.google.dev/gemini-api)
 
+GUI
+- Python [tkinter](https://docs.python.org/3/library/tkinter.html)
+
 TTs
 - Uses the pre-trained Silero [v3_en model](https://models.silero.ai/models/tts/en/)
 
