@@ -23,7 +23,7 @@ pip install chromadb
 
 Response generation
 - [Gemini 1.0 API](https://ai.google.dev/gemini-api)
-- Replace `GEMINI_API_KEY` in [`env`](src\\.env) with your actual api key
+- Replace `GEMINI_API_KEY` in [`env`](src/.env) with your actual api key
 
 GUI
 - Python [tkinter](https://docs.python.org/3/library/tkinter.html)
