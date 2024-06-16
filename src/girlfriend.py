@@ -67,7 +67,7 @@ class Girlfriend:
             return "Goodbye my pookie wookie"
         if prompt=="reset":
             Girlfriend.Reset()
-            return "Succcessfully resetted"
+            return "Successfully resetted"
 
         try:
             relevant = Girlfriend.Memory.query(

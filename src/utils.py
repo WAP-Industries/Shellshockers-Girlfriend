@@ -16,6 +16,19 @@ class Utils:
         )
     )
 
+    Symbols = {
+        "+": "plus",
+        "-": "minus",
+        "/": "divide",
+        "*": "multiply"
+    }
+
+    @staticmethod
+    def PostProcess(text: str):
+        for i in Utils.Symbols:
+            text = text.replace(i, f" {Utils.Symbols[i]} ")
+        return text
+
     @staticmethod
     def RemoveVoice():
         from girlfriend import Girlfriend

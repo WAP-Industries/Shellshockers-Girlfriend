@@ -16,7 +16,7 @@ def main():
             Utils.RemoveSprite()
 
         prompt = Girlfriend.GetInput()
-        response = Girlfriend.GetResponse(prompt) if prompt else "I'm sorry, could you repeat that?"
+        response = Utils.PostProcess(Girlfriend.GetResponse(prompt)) if prompt else "I'm sorry, could you repeat that?"
         Girlfriend.Speak(response)
         
         Girlfriend.Prompt = [Girlfriend.Prompt[0]]
