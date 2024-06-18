@@ -6,7 +6,7 @@ import threading
 from girlfriend import *
 
 
-def main():
+def main() -> None:
     while 1:
         if Girlfriend.Ended:
             return

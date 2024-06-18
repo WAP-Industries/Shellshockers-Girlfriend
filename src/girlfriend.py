@@ -128,7 +128,7 @@ class Girlfriend:
             Girlfriend.Error("speak input", e)
 
     @staticmethod
-    def SaveMemory(input, prompt):
+    def SaveMemory(input, prompt) -> None:
         Girlfriend.Memory.add(
             documents=[f"{input}{Girlfriend.MemSep}{prompt}"],
             ids=[str(len(Girlfriend.Memory.get()["documents"]))]

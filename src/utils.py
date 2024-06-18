@@ -24,13 +24,13 @@ class Utils:
     }
 
     @staticmethod
-    def PostProcess(text: str):
+    def PostProcess(text: str) -> str:
         for i in Utils.Symbols:
             text = text.replace(i, f" {Utils.Symbols[i]} ")
         return text
 
     @staticmethod
-    def RemoveVoice():
+    def RemoveVoice() -> None:
         from girlfriend import Girlfriend
         
         if os.path.exists(Girlfriend.VoiceFile):
